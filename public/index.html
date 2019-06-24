@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500,700" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700" rel="stylesheet">
+
+	  <!-- Bootstrap-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>React Movie App</title>
+
+  </head>
+  <body onload="myLoader()" style="margin:0;">
+
+    <div id="loader"></div>
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div style="display:none;" id="mainContainer" class="animate-bottom">
+      <div id="root"></div>   
+    </div>
+
+    <!-- Loader-->
+    <script>
+      var myVar;
+      
+      function myLoader() {
+        myVar = setTimeout(showPage, 3000);
+      }
+      
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("mainContainer").style.display = "block";
+      }
+    </script>
+  
+  </body>
+</html>
